@@ -104,7 +104,7 @@ class syntax_plugin_exttab1 extends DokuWiki_Syntax_Plugin {
      @var   $mytable    the code that will be inserted into the document
      @return true, if rendering happens, false in all other cases
     */
-    function render($mode, &$renderer, $data)
+    function render($mode, Doku_Renderer $renderer, $data)
     {
         if ($mode == 'xhtml' && strlen($data[0]) > 1) {
             $rawdata = explode("\n", $data[0]);
